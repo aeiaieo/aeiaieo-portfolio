@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #8E8E8E, #EDEDE9, #D6CCC2, #D5BDAF, #f3c4cc);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+main {
+    width: 55rem;
+    height: 35rem;
+    background: #D5BDAF;
+    border-radius: 15px;
+    margin: 130px 275px;
+    position: fixed;
+    z-index: 1;
+}
+/* moving background */
+#top {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, rgb(243, 196, 204), #EDEDE9);
+    filter: blur(80px);
+    animation: one 15s infinite;
+}
+#left {
+    width: 600px;
+    height: 600px;
+    left: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #8E8E8E, #f3c4cc);
+    filter: blur(80px);
+    animation: two 15s infinite;
+}
+#bottom {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #D6CCC2, #EDEDE9);
+    filter: blur(80px);
+    animation: three 15s infinite;
+}
+#right {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #8E8E8E, #EDEDE9);
+    filter: blur(80px);
+    animation: four 15s infinite;
+}
+@keyframes one {
+    0%, 100% {
+        left: -100px;
+    }
+    50% {
+        left: 1000px;
+    }
+ }
+@keyframes two {
+    0%, 100% {
+        top: -100px;
+    }
+    70% {
+        top: 800px;
+    }
+  }
+@keyframes three {
+    0%, 100% {
+        top: 100px;
+    }
+    80%{
+        top: 700px;
+    }
+}
+@keyframes four {
+    0%, 100% {
+        left: 700px;
+    }
+    70%{
+        left: -100px;
+    }
+}
